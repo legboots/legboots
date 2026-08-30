@@ -224,10 +224,6 @@ main li a {
     font-size: 1.15rem;
 }
 
-main li strong {
-    color: var(--accent);
-}
-
 main li img {
     width: 6rem;
     height: auto;

@@ -12,14 +12,11 @@
 
         const icon = document.createElement('img');
         icon.src = item.icon;
-        icon.alt = '';
+        icon.alt = item.name;
         icon.width = 680;
         icon.height = 680;
 
-        const name = document.createElement('strong');
-        name.textContent = item.name;
-
-        link.append(icon, name);
+        link.append(icon);
 
         const tag = document.createElement('small');
         tag.textContent = item.tag;
