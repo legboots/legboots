@@ -16,7 +16,7 @@ python -m http.server -d src 8000
 
 ## Deployment
 
-Pushes to `master` that touch `src/` publish to GitHub Pages via
+Pushes to `main` that touch `src/` publish to GitHub Pages via
 [.github/workflows/deploy.yml](.github/workflows/deploy.yml), which uploads `src/` as the
 Pages artifact. No secrets are needed; the workflow authenticates with `id-token: write`.
 

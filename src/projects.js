@@ -6,7 +6,7 @@
         const entry = document.createElement('li');
 
         const link = document.createElement('a');
-        link.href = item.projectUrl;
+        link.href = item.websiteUrl || item.projectUrl;
         link.rel = 'noopener';
         link.target = '_blank';
 
@@ -26,6 +26,15 @@
 
         const blurb = document.createElement('p');
         blurb.textContent = item.blurb;
+
+        if (item.websiteUrl) {
+            const source = document.createElement('a');
+            source.href = item.projectUrl;
+            source.rel = 'noopener';
+            source.target = '_blank';
+            source.textContent = 'source';
+            blurb.append(' ', source);
+        }
 
         entry.append(link, tag, blurb);
         list.appendChild(entry);
