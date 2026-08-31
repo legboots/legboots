@@ -147,108 +147,38 @@ h2 {
     font-size: 1.5rem;
 }
 
+main article {
+    max-width: 60%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: .5rem 1.5rem;
+    text-align: left;
+}
+
+main article h2 {
+    grid-column: 1 / -1;
+}
+
+main article > a {
+    border-bottom: 0;
+}
+
+main article img {
+    display: block;
+    width: min(10rem, 30vw);
+    height: auto;
+}
+
+main article p {
+    margin: 0;
+}
+
 p {
     margin: 0 0 1rem;
 }
 
-
-main ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2.5rem 2rem;
-    margin: 3rem 0 0;
-    padding: 0;
-    list-style: none;
-}
-
-main li {
-    flex: 0 1 13rem;
-}
-
-ul.dualshock {
-    flex-direction: column;
-    align-items: center;
-}
-
-ul.dualshock li {
-    flex: none;
-    width: 13rem;
-}
-
-@media (min-width: 48rem) {
-    ul.dualshock {
-        display: grid;
-        grid-template-areas:
-            ". top ."
-            "left . right"
-            ". bottom .";
-        grid-template-columns: repeat(3, max-content);
-        justify-content: center;
-        gap: 1rem;
-    }
-
-    ul.dualshock li {
-        width: 12rem;
-    }
-
-    ul.dualshock li:nth-child(1) {
-        grid-area: top;
-    }
-
-    ul.dualshock li:nth-child(2),
-    ul.dualshock li:nth-child(3),
-    ul.dualshock li:nth-child(4) {
-        margin-top: -3.5rem;
-    }
-
-    ul.dualshock li:nth-child(2) {
-        grid-area: right;
-    }
-
-    ul.dualshock li:nth-child(3) {
-        grid-area: bottom;
-    }
-
-    ul.dualshock li:nth-child(4) {
-        grid-area: left;
-    }
-}
-
-main li a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: .75rem;
-    border-bottom: 0;
-    font-size: 1.15rem;
-}
-
-main li img {
-    width: 6rem;
-    height: auto;
-    border-radius: 14px;
-    transition: transform .3s;
-}
-
-main li a:hover img,
-main li a:focus-visible img {
-    transform: translateY(-3px);
-}
-
-main li small {
-    display: block;
-    margin-top: .4rem;
-    text-transform: uppercase;
-    letter-spacing: .12em;
-    font-size: .65rem;
-    color: var(--muted);
-}
-
-main li p {
-    margin: .5rem 0 0;
-    color: var(--muted);
-}
 
 footer {
     display: flex;
